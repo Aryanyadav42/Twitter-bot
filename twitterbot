@@ -1,0 +1,69 @@
+import tweepy
+import os
+import time
+
+auth = tweepy.OAuthHandler('lHNpVRoi2y1WA9ied7V1NlRzC', 'AZFl60FNnEA9hTEUJY3T5YbGoFwKisMYMWDdgYPu3MS6ZbXsM3')
+auth.set_access_token('1239582149470064641-n0gD9HpmDypBLLVKZRb8qY58irR27S', 'nqZ4qflNjxHFYbhE8b1OqBYgTNhmLob1eknjB6dq6ooVF')
+
+api = tweepy.API(auth)
+
+
+# Print every tweet in the timeline
+#public_tweets = api.home_timeline()
+#for tweet in public_tweets:
+#    print(tweet.text) 
+
+# Creates an object for user and methods can be used to perform different set of operations
+#user = api.me()
+#print(user.screen_name)
+#print(user.followers_count)
+#for friend in user.friends():
+#	print(friend.screen_name)
+
+
+# We can also get Info about other user like this
+#user = api.get_user('twitter')
+#print(user.screen_name)
+#print(user.followers_count)
+#for friend in user.friends():
+#	print(friend.screen_name)
+
+# It will follow every follower of the user
+#for follower in tweepy.Cursor(api.followers).items():
+#	follower.follow()
+
+
+# Tweeting something
+#status = "Hey Everyone"
+#api.update_status(status)
+
+
+# Retweeting (You can get the Status id in Two ways first by using the method of tweepy or by just simply clicking on status you want to retweet and just copying it's id)
+#api.retweet("1396969503708389379")
+
+# Liking a tweet
+#api.create_favorite("1396969503708389379")
+
+# Disliking a tweet
+#api.destroy_favorite("1396969503708389379")
+
+
+# Deleting Status 
+#status.destroy()
+
+
+# Return the tweets posted by the user
+#api.user_timeline()
+
+
+# Return the tweets that have been retweeted by other users
+#api.retweets_of_me()
+
+# Return the most recent mentions like retweets and all
+#api.mentions_timeline()
+
+# uploading a media with or withut text
+#media = api.media_upload('Nature.jpg')
+#api.update_status(media_ids = [media.media_id_string])
+
+
